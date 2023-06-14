@@ -1,0 +1,21 @@
+<div class="container">
+  <h1><%= @resource_name.titleize %> - Результаты поиска</h1>
+  <table class="table">
+    <thead>
+    <tr>
+      <% @fields.each do |field| %>
+        <th><%= field.titleize %></th>
+      <% end %>
+    </tr>
+    </thead>
+    <tbody>
+    <% @results.each do |result| %>
+      <tr>
+        <% @fields.each do |field| %>
+          <td><%= result[field] %></td>
+        <% end %>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

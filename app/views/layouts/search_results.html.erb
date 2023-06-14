@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Результаты поиска</h1>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Артикул</th>
+      <th>Название</th>
+      <th>Склад</th>
+      <th>Количество</th>
+      <th>Цена</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product['article'] %></td>
+        <td><%= product['name'] %></td>
+        <td><%= product['whname'] %></td>
+        <td><%= product['count'] %></td>
+        <td><%= product['price'] %> руб.</td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
